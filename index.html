@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>Buvette du Plan d'O</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-logo">Plan d<span>'</span>O</div>
+            <div class="nav-links">
+                <a href="#carte">La Carte</a>
+                <a href="#horaires">Horaires</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="#map" class="nav-cta">S'y rendre →</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <img src="src/img/plando2.jpg" class="hero-img" alt="Buvette au bord de l'eau">
+
+        <!-- Grain texture overlay -->
+        <div style="position:absolute;inset:0;background:linear-gradient(160deg, rgba(10,40,55,0.15) 0%, rgba(10,40,55,0.55) 60%, rgba(10,40,55,0.75) 100%);z-index:1;"></div>
+
+        <div class="hero-content" style="z-index:2;">
+            <div class="hero-tag">Au bord de l'eau</div>
+            <h2 class="hero-title">
+                Buvette<br>du <em>Plan d'O</em>
+            </h2>
+            <p class="hero-sub">Fraîcheur, sourires et pieds dans l'eau.</p>
+            <div class="hero-actions">
+                <a href="#carte" class="btn-primary">Voir la carte</a>
+                <a href="#contact" class="btn-ghost">Nous appeler</a>
+            </div>
+        </div>
+
+        <!-- Wave bottom -->
+        <svg class="hero-blob" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,10 1440,40 L1440,80 L0,80 Z" fill="#fdf8f2"/>
+        </svg>
+    </header>
+
+    <!-- CARTE -->
+    <section id="carte" class="carte-section">
+        <div class="carte-inner">
+            <div class="carte-header">
+                <div>
+                    <p class="section-label">— Ce qu'on sert</p>
+                    <h3 class="section-title">Notre <em style="color:var(--green)">Carte</em></h3>
+                </div>
+                <p class="carte-desc">
+                    Des produits frais, locaux et faits avec soin. 
+                    Parfaits pour une pause au soleil ou une longue soirée estivale sur la terrasse.
+                </p>
+            </div>
+
+            <div class="carte-grid">
+                <!-- Boissons -->
+                <div class="carte-card">
+                    <div class="carte-card-header">
+                        
+                        <h4 class="carte-card-title blue">Boissons Fraîches</h4>
+                    </div>
+                    <ul class="carte-items">
+                        <li class="carte-item">
+                            <span class="carte-item-name">Citronnade Maison (40cl)</span>
+                        </li>
+                        <li class="carte-item">
+                            <span class="carte-item-name">Bière Artisanale Locale</span>
+                        </li>
+                        <li class="carte-item">
+                            <span class="carte-item-name">Café Frappé Vanille</span>
+                        </li>
+                    </ul>
+                </div>
+
+               
+                <div class="carte-card" style="border-left: 2px solid #f5ede0;">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background:var(--sand); padding: 7rem 2rem;">
+        <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:5rem; align-items:start;">
+            <div style="position:sticky; top:5rem;">
+                <p class="section-label green">— Notre histoire</p>
+                <h3 class="section-title" style="margin-bottom:1.5rem;">Un lieu,<br><em style="color:var(--green)">une mémoire.</em></h3>
+                <div style="width:40px; height:3px; background:var(--green); border-radius:100px; opacity:0.5;"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:2.5rem;">
+                <p style="font-family:'Playfair Display',serif; font-size:1.15rem; line-height:1.9; color:#374151; font-weight:400;">
+                    Avant les années 70, le Plan d'Eau n'était qu'une zone sauvage et inondable. Sous l'impulsion de Raymond Mondon et Jean-Marie Rausch, ce terrain a été transformé en un véritable poumon vert, offrant aux Messins une évasion en plein centre-ville.
+                </p>
+                <p style="font-family:'Playfair Display',serif; font-size:1.15rem; line-height:1.9; color:#374151; font-weight:400;">
+                    Née pour ravitailler les promeneurs et les amateurs de pédalos, notre buvette est vite devenue le QG des familles le dimanche. Située au bord de la flottille, elle incarne depuis ses débuts l'esprit de détente au fil de l'eau.
+                </p>
+                <p style="font-family:'Playfair Display',serif; font-size:1.15rem; line-height:1.9; color:#374151; font-weight:400;">
+                    Avec l'arrivée de Metz Plage dans les années 2000, la Buvette a changé de dimension. Aujourd'hui, elle fait le pont entre le centre historique et le Saulcy. Que vous soyez étudiant, joggeur ou simplement là pour admirer la Cathédrale Saint-Étienne au coucher du soleil, votre table vous attend.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div style="background:var(--sand); margin-bottom:-2px;">
+        <svg viewBox="0 0 1440 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#fdf8f2"/>
+        </svg>
+    </div>
+
+    <section style="background:var(--cream); padding: 0 2rem 5rem;">
+        <div style="max-width:1100px; margin:0 auto;">
+            <p class="section-label green" style="margin-bottom:0.8rem;">— La terrasse en images</p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; border-radius:24px; overflow:hidden; box-shadow:0 20px 60px rgba(26,95,122,0.1);">
+                <img src="src/img/plando1.jpg" alt="Terrasse printemps" style="width:100%; height:320px; object-fit:cover; display:block;">
+                <img src="src/img/plando2.jpg" alt="Terrasse été" style="width:100%; height:320px; object-fit:cover; display:block;">
+            </div>
+        </div>
+    </section>
+    <div style="background:var(--cream); margin-bottom:-2px;">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#1a5f7a"/>
+        </svg>
+    </div>
+    <section id="horaires" class="horaires-section">
+        <div class="horaires-blob"></div>
+        <div class="horaires-inner">
+            <div>
+                <p class="section-label" style="color: rgba(255,255,255,0.35);">— Quand nous trouver</p>
+                <h3 class="horaires-title">On vous <em>attend.</em></h3>
+                <p class="horaires-text">
+                    Venez profiter de la terrasse ombragée et du calme de l'eau. 
+                    Nos horaires peuvent varier légèrement selon la météo du jour.
+                </p>
+                <ul class="horaires-list">
+                    <li class="horaires-item">
+                        <span class="horaires-day">Mer, Sam, Dim & Jours fériés</span>
+                        <span class="horaires-time">10h → 19h</span>
+                    </li>
+                    <li class="horaires-item">
+                        <span class="horaires-day">Vacances scolaires</span>
+                        <span class="horaires-time highlight">11h → 20h · tous les jours</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="map" class="map-placeholder">
+                Carte Google Maps
+            </div>
+        </div>
+    </section>
+
+    <div style="background:#1a5f7a; margin-bottom:-2px;">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <path d="M0,30 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#1c2b35"/>
+        </svg>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-logo">Plan d<span>'O</span></div>
+                    <p class="footer-tagline">Fraîcheur, sourires et pieds dans l'eau.</p>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-label">Adresse</span>
+                        <span class="footer-contact-val">4577+PM, 57050 Longeville-lès-Metz</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-label">Téléphone</span>
+                        <a href="tel:+33123456789" class="footer-contact-val">06 78 47 27 30</a>
+                    </div>
+                </div>
+            </div>
+            <div style="width:260px; height:3px ; background:var(--green); border-radius:100px; margin-bottom:2rem; opacity:0.5;"></div>
+        <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Buvette du Plan d'O. Tous droits réservés.</p>
+            </div>
+        </div>
+        <script>
+          const map = L.map('map').setView([49.1137341712485, 6.164945396831541], 16); // lat, lng, zoom
+      
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      
+          L.marker([49.1137341712485, 6.164945396831541])
+              .addTo(map)
+              .bindPopup('Buvette du Plan d\'O')
+              .openPopup();
+      </script>
+    </footer>
+
+</body>
+</html>

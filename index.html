@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="module" src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <title>Buvette du Plan d'O</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
@@ -189,7 +189,7 @@
                 <p class="footer-copy">© 2026 Buvette du Plan d'O. Tous droits réservés.</p>
             </div>
         </div>
-        <script>
+        <script type="module">
           const map = L.map('map').setView([49.1137341712485, 6.164945396831541], 16); // lat, lng, zoom
       
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
